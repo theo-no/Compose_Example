@@ -1,10 +1,24 @@
  package com.csh.compose_example
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Send
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -20,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.csh.compose_example.ui.theme.Compose_ExampleTheme
 
+ private const val TAG = "차선호"
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,15 +44,19 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    CustomButton(onButtonClicked = {
+                        Log.d(TAG, "onClicked...")
+                        Toast.makeText(this, "onClick....", Toast.LENGTH_SHORT).show()
+                    }) //위임 받아서 여기 코드가 돌아감
                 }
             }
         }
     }
 }
 
+
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun CustomText(name: String) {
     Text(
         color = Color.Red,
         text = "Hello $name!\nHello $name!\nHello $name!",
@@ -52,10 +71,39 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun CustomTextPreview() {
     Compose_ExampleTheme {
-        Greeting("Android")
+        CustomText("Android")
     }
 }
+
+ @Composable
+ fun CustomButton(onButtonClicked: () -> Unit){
+    Button(
+        onClick = onButtonClicked,
+//        enabled = false,
+        border = BorderStroke(1.dp, Color.Black), //테두리
+        shape = RoundedCornerShape(10.dp), //모양 설정(값 하나만 주면 모서리에 모두 10dp만큼 둥글게 설정)
+        contentPadding = PaddingValues(10.dp), //padding 값 설정(값 하나만 주면 전체에 같은 값 패딩 적용)
+    ){
+        Icon(
+            imageVector = Icons.Filled.Send,
+            contentDescription = "exampleButton" //버튼에 대한 설명
+        )
+        Spacer(
+            modifier = Modifier.size(ButtonDefaults.IconSpacing) //제공하는 icon 사이 여백 값(dp로 임의로 줘도 됨)
+        )
+        Text("Button")
+    }
+ }
+
+
+ @Preview(showBackground = true)
+ @Composable
+ fun CustomButtonPreview() {
+     Compose_ExampleTheme {
+         CustomButton(onButtonClicked = {}) //위임 받아서 여기 코드가 돌아감
+     }
+ }

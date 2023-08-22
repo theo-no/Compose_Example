@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Compose_Example"
         tools:targetApi="31">
         <activity
+            android:name=".ConstraintsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_constraints"
+            android:theme="@style/Theme.Compose_Example" />
+        <activity
             android:name=".ColumnActivity"
             android:exported="false"
             android:label="@string/title_activity_column"

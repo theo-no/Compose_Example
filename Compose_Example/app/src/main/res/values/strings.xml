@@ -4,4 +4,5 @@
     <string name="title_activity_row">RowActivity</string>
     <string name="title_activity_column">ColumnActivity</string>
     <string name="title_activity_constraints">ConstraintsActivity</string>
+    <string name="title_activity_image">ImageActivity</string>
 </resources>

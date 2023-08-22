@@ -1,4 +1,4 @@
-package com.csh.compose_example
+package com.csh.compose_example.component
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

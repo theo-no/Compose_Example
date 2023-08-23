@@ -15,9 +15,9 @@
         android:theme="@style/Theme.Compose_Example"
         tools:targetApi="31">
         <activity
-            android:name=".component.TopAppBarActivity"
+            android:name=".component.SlotAPIActivity"
             android:exported="true"
-            android:label="@string/title_activity_top_app_bar"
+            android:label="@string/title_activity_slot_apiactivity"
             android:theme="@style/Theme.Compose_Example">
 
             <intent-filter>
@@ -27,16 +27,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".component.TopAppBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_top_app_bar"
+            android:theme="@style/Theme.Compose_Example">
+        </activity>
+        <activity
             android:name=".component.TextFieldActivity"
             android:exported="true"
             android:label="@string/title_activity_text_field"
-            android:theme="@style/Theme.Compose_Example">
-        </activity>
+            android:theme="@style/Theme.Compose_Example"></activity>
         <activity
             android:name=".component.CheckBoxActivity"
             android:exported="true"
             android:label="@string/title_activity_check_box"
-            android:theme="@style/Theme.Compose_Example"></activity>
+            android:theme="@style/Theme.Compose_Example" />
         <activity
             android:name=".component.ProfileCardActivity"
             android:exported="true"

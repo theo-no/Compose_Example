@@ -6,8 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.csh.compose_example.uses.screen.CanvasScreen
 import com.csh.compose_example.uses.screen.ConstraintChainAndBarrierScreen
 import com.csh.compose_example.uses.screen.ConstraintLayoutScreen
+import com.csh.compose_example.uses.screen.ConstraintLayoutUsesScreen
 import com.csh.compose_example.uses.screen.ConstraintSetScreen
 import com.csh.compose_example.uses.screen.HomeScreen
 
@@ -38,6 +40,16 @@ fun NavGraph(
             route = Screen.ConstraintChainAndBarrier.route
         ) {
             ConstraintChainAndBarrierScreen(navController)
+        }
+        composable(
+            route = Screen.ConstraintLayoutUses.route
+        ) {
+            ConstraintLayoutUsesScreen(navController)
+        }
+        composable(
+            route = Screen.Canvas.route
+        ) {
+            CanvasScreen(navController)
         }
     }
 } // End of setUpNavGraph

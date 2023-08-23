@@ -42,6 +42,22 @@ fun HomeScreen(
                 "ConstraintChainAndBarrier"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.ConstraintLayoutUses.route)
+        }) {
+            Text(
+                "ConstraintLayoutUses"
+            )
+        }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.Canvas.route)
+        }) {
+            Text(
+                "Canvas"
+            )
+        }
     }
 
 }

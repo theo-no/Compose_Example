@@ -15,10 +15,15 @@
         android:theme="@style/Theme.Compose_Example"
         tools:targetApi="31">
         <activity
-            android:name=".component.ScaffoldActivity"
+            android:name=".uses.UsesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_uses"
+            android:theme="@style/Theme.Compose_Example" />
+        <activity
+            android:name=".component.CatalogActivity"
             android:exported="true"
-            android:label="@string/title_activity_scaffold"
-            android:theme="@style/Theme.Compose_Example" >
+            android:label="@string/title_activity_catalog"
+            android:theme="@style/Theme.Compose_Example">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,17 +31,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".component.ScaffoldActivity"
+            android:exported="true"
+            android:label="@string/title_activity_scaffold"
+            android:theme="@style/Theme.Compose_Example"></activity>
+        <activity
             android:name=".component.SlotAPIActivity"
             android:exported="true"
             android:label="@string/title_activity_slot_apiactivity"
-            android:theme="@style/Theme.Compose_Example">
-        </activity>
+            android:theme="@style/Theme.Compose_Example" />
         <activity
             android:name=".component.TopAppBarActivity"
             android:exported="false"
             android:label="@string/title_activity_top_app_bar"
-            android:theme="@style/Theme.Compose_Example"/>
-
+            android:theme="@style/Theme.Compose_Example" />
         <activity
             android:name=".component.TextFieldActivity"
             android:exported="true"
@@ -56,8 +64,7 @@
             android:name=".component.ImageActivity"
             android:exported="true"
             android:label="@string/title_activity_image"
-            android:theme="@style/Theme.Compose_Example">
-        </activity>
+            android:theme="@style/Theme.Compose_Example" />
         <activity
             android:name=".component.ConstraintsActivity"
             android:exported="false"

@@ -11,4 +11,6 @@
     <string name="title_activity_top_app_bar">TopAppBarActivity</string>
     <string name="title_activity_slot_apiactivity">SlotAPIActivity</string>
     <string name="title_activity_scaffold">ScaffoldActivity</string>
+    <string name="title_activity_catalog">CatalogActivity</string>
+    <string name="title_activity_uses">UsesActivity</string>
 </resources>

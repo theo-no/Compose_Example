@@ -6,4 +6,5 @@ package com.csh.compose_example.navigation
 sealed class Screen(val route: String) {
     object Home : Screen(route = "home_screen")
     object ConstraintLayout : Screen(route = "constraintlayout_screen")
+    object Canvas : Screen(route = "canvas_screen")
 }

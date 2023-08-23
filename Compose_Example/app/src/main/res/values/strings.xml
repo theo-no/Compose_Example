@@ -6,4 +6,5 @@
     <string name="title_activity_constraints">ConstraintsActivity</string>
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_profile_card">ProfileCardActivity</string>
+    <string name="title_activity_check_box">CheckBoxActivity</string>
 </resources>

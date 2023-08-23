@@ -58,6 +58,14 @@ fun HomeScreen(
                 "Canvas"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.Dialog.route)
+        }) {
+            Text(
+                "Dialog"
+            )
+        }
     }
 
 }

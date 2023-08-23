@@ -1,4 +1,4 @@
-package com.csh.compose_example.uses
+package com.csh.compose_example.uses.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -18,15 +18,28 @@ fun HomeScreen(
     navController: NavController
 ){
     Column {
-        Text(
-            "HomeScreen"
-        )
         Spacer(modifier = Modifier.run { size(8.dp) })
         Button(onClick = {
             navController.navigate(Screen.ConstraintLayout.route)
         }) {
             Text(
                 "ConstraintLayout"
+            )
+        }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.ConstraintSet.route)
+        }) {
+            Text(
+                "ConstraintSet"
+            )
+        }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.ConstraintChainAndBarrier.route)
+        }) {
+            Text(
+                "ConstraintChainAndBarrier"
             )
         }
     }

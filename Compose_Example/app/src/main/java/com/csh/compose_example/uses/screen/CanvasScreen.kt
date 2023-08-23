@@ -1,4 +1,4 @@
-package com.csh.compose_example.uses
+package com.csh.compose_example.uses.screen
 
 import androidx.compose.runtime.Composable
 

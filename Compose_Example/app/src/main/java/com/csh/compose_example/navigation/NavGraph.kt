@@ -11,6 +11,7 @@ import com.csh.compose_example.uses.screen.ConstraintChainAndBarrierScreen
 import com.csh.compose_example.uses.screen.ConstraintLayoutScreen
 import com.csh.compose_example.uses.screen.ConstraintLayoutUsesScreen
 import com.csh.compose_example.uses.screen.ConstraintSetScreen
+import com.csh.compose_example.uses.screen.CustomDialogScreen
 import com.csh.compose_example.uses.screen.DialogScreen
 import com.csh.compose_example.uses.screen.HomeScreen
 
@@ -56,6 +57,11 @@ fun NavGraph(
             route = Screen.Dialog.route
         ) {
             DialogScreen(navController)
+        }
+        composable(
+            route = Screen.CustomDialog.route
+        ) {
+            CustomDialogScreen(navController)
         }
     }
 } // End of setUpNavGraph

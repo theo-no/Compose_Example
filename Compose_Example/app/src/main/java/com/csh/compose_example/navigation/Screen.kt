@@ -11,4 +11,5 @@ sealed class Screen(val route: String) {
     object ConstraintLayoutUses : Screen(route = "constraint_layout_uses_screen")
     object Canvas : Screen(route = "canvas_screen")
     object Dialog : Screen(route = "dialog_screen")
+    object CustomDialog : Screen(route = "custom_dialog_screen")
 }

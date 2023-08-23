@@ -4,21 +4,27 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.csh.compose_example.uses.UsesActivity
-import com.csh.compose_example.uses.UsesScreen
+import androidx.navigation.compose.rememberNavController
+import com.csh.compose_example.uses.ConstraintLayoutScreen
+import com.csh.compose_example.uses.HomeScreen
 
 @Composable
 fun NavGraph(
-    navController: NavHostController
+    navController: NavHostController = rememberNavController()
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Uses.route
+        startDestination = Screen.Home.route
     ) {
         composable(
-            route = Screen.Uses.route
+            route = Screen.Home.route
         ) {
-            UsesScreen(navController = navController)
+            HomeScreen(navController)
+        }
+        composable(
+            route = Screen.ConstraintLayout.route
+        ) {
+            ConstraintLayoutScreen(navController)
         }
     }
 } // End of setUpNavGraph

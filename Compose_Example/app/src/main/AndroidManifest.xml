@@ -16,19 +16,21 @@
         tools:targetApi="31">
         <activity
             android:name=".uses.UsesActivity"
-            android:exported="false"
-            android:label="@string/title_activity_uses"
-            android:theme="@style/Theme.Compose_Example" />
-        <activity
-            android:name=".component.CatalogActivity"
             android:exported="true"
-            android:label="@string/title_activity_catalog"
+            android:label="@string/title_activity_uses"
             android:theme="@style/Theme.Compose_Example">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".component.CatalogActivity"
+            android:exported="true"
+            android:label="@string/title_activity_catalog"
+            android:theme="@style/Theme.Compose_Example">
         </activity>
         <activity
             android:name=".component.ScaffoldActivity"

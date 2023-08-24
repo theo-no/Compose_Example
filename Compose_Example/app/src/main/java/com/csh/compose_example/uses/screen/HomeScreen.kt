@@ -87,7 +87,15 @@ fun HomeScreen(
             navController.navigate(Screen.SnackBar.route)
         }) {
             Text(
-                "SnackBarScreen"
+                "SnackBar"
+            )
+        }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.BottomAppBar.route)
+        }) {
+            Text(
+                "BottomAppBar"
             )
         }
     }

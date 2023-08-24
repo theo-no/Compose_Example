@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.csh.compose_example.uses.screen.BottomAppBarScreen
 import com.csh.compose_example.uses.screen.CanvasScreen
 import com.csh.compose_example.uses.screen.ConstraintChainAndBarrierScreen
 import com.csh.compose_example.uses.screen.ConstraintLayoutScreen
@@ -68,6 +69,11 @@ fun NavGraph(
             route = Screen.SnackBar.route
         ) {
             SnackBarScreen(navController)
+        }
+        composable(
+            route = Screen.BottomAppBar.route
+        ) {
+            BottomAppBarScreen(navController)
         }
     }
 } // End of setUpNavGraph

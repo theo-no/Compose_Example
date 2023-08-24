@@ -98,6 +98,14 @@ fun HomeScreen(
                 "BottomAppBar"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.State.route)
+        }) {
+            Text(
+                "State"
+            )
+        }
     }
 
 }

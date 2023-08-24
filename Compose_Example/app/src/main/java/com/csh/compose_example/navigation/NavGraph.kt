@@ -16,6 +16,7 @@ import com.csh.compose_example.uses.screen.DialogScreen
 import com.csh.compose_example.uses.screen.DropDownMenuScreen
 import com.csh.compose_example.uses.screen.HomeScreen
 import com.csh.compose_example.uses.screen.SnackBarScreen
+import com.csh.compose_example.uses.screen.StateScreen
 
 @Composable
 fun NavGraph(
@@ -74,6 +75,11 @@ fun NavGraph(
             route = Screen.BottomAppBar.route
         ) {
             BottomAppBarScreen(navController)
+        }
+        composable(
+            route = Screen.State.route
+        ) {
+            StateScreen(navController)
         }
     }
 } // End of setUpNavGraph

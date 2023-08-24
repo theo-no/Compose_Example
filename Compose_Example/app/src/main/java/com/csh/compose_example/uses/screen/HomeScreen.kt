@@ -82,6 +82,14 @@ fun HomeScreen(
                 "DropDownMenu"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.SnackBar.route)
+        }) {
+            Text(
+                "SnackBarScreen"
+            )
+        }
     }
 
 }

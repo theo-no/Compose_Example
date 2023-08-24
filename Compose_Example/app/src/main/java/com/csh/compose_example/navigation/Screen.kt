@@ -13,4 +13,5 @@ sealed class Screen(val route: String) {
     object Dialog : Screen(route = "dialog_screen")
     object CustomDialog : Screen(route = "custom_dialog_screen")
     object DropDownMenu : Screen(route = "drop_down_menu_screen")
+    object SnackBar : Screen(route = "snack_bar_screen")
 }

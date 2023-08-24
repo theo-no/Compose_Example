@@ -14,6 +14,7 @@ import com.csh.compose_example.uses.screen.CustomDialogScreen
 import com.csh.compose_example.uses.screen.DialogScreen
 import com.csh.compose_example.uses.screen.DropDownMenuScreen
 import com.csh.compose_example.uses.screen.HomeScreen
+import com.csh.compose_example.uses.screen.SnackBarScreen
 
 @Composable
 fun NavGraph(
@@ -62,6 +63,11 @@ fun NavGraph(
             route = Screen.DropDownMenu.route
         ) {
             DropDownMenuScreen(navController)
+        }
+        composable(
+            route = Screen.SnackBar.route
+        ) {
+            SnackBarScreen(navController)
         }
     }
 } // End of setUpNavGraph

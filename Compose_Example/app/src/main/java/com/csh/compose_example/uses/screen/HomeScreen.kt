@@ -114,6 +114,22 @@ fun HomeScreen(
                 "Animation"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.Animation2.route)
+        }) {
+            Text(
+                "Animation2"
+            )
+        }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.SideEffect.route)
+        }) {
+            Text(
+                "SideEffect"
+            )
+        }
     }
 
 }

@@ -1,10 +1,12 @@
 package com.csh.compose_example.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.csh.compose_example.uses.screen.Animation2Screen
 import com.csh.compose_example.uses.screen.AnimationScreen
 import com.csh.compose_example.uses.screen.BottomAppBarScreen
 import com.csh.compose_example.uses.screen.CanvasScreen
@@ -16,6 +18,7 @@ import com.csh.compose_example.uses.screen.CustomDialogScreen
 import com.csh.compose_example.uses.screen.DialogScreen
 import com.csh.compose_example.uses.screen.DropDownMenuScreen
 import com.csh.compose_example.uses.screen.HomeScreen
+import com.csh.compose_example.uses.screen.SideEffectScreen
 import com.csh.compose_example.uses.screen.SnackBarScreen
 import com.csh.compose_example.uses.screen.StateScreen
 
@@ -86,6 +89,16 @@ fun NavGraph(
             route = Screen.Animation.route
         ) {
             AnimationScreen(navController)
+        }
+        composable(
+            route = Screen.Animation2.route
+        ) {
+            Animation2Screen(navController)
+        }
+        composable(
+            route = Screen.SideEffect.route
+        ) {
+            SideEffectScreen(LocalLifecycleOwner.current, navController)
         }
     }
 } // End of setUpNavGraph

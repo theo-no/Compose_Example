@@ -17,4 +17,6 @@ sealed class Screen(val route: String) {
     object BottomAppBar : Screen(route = "bottom_app_bar_screen")
     object State : Screen(route = "state_screen")
     object Animation : Screen(route = "animation_screen")
+    object Animation2 : Screen(route = "animation2_screen")
+    object SideEffect : Screen(route = "side_effect_screen")
 }

@@ -1,7 +1,6 @@
 package com.csh.compose_example.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.constraintlayout.compose.ConstraintSet
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,6 +12,7 @@ import com.csh.compose_example.uses.screen.ConstraintLayoutUsesScreen
 import com.csh.compose_example.uses.screen.ConstraintSetScreen
 import com.csh.compose_example.uses.screen.CustomDialogScreen
 import com.csh.compose_example.uses.screen.DialogScreen
+import com.csh.compose_example.uses.screen.DropDownMenuScreen
 import com.csh.compose_example.uses.screen.HomeScreen
 
 @Composable
@@ -59,9 +59,9 @@ fun NavGraph(
             DialogScreen(navController)
         }
         composable(
-            route = Screen.CustomDialog.route
+            route = Screen.DropDownMenu.route
         ) {
-            CustomDialogScreen(navController)
+            DropDownMenuScreen(navController)
         }
     }
 } // End of setUpNavGraph

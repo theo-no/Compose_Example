@@ -23,6 +23,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.csh.compose_example.navigation.Screen
 
 @Composable
 fun ConstraintLayoutUsesScreen(
@@ -45,6 +46,7 @@ fun Card(cardData: CardData){
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = Modifier.padding(4.dp),
     ) {
+
         // 단계 1: 아래의 Row 레이아웃을 ConstraintLayout로 바꾸어 봅시다.
         ConstraintLayout(
             modifier = Modifier.fillMaxWidth()
@@ -66,7 +68,7 @@ fun Card(cardData: CardData){
             )
             Text(
                 text = cardData.author,
-                modifier = Modifier.constrainAs(author){
+                modifier = Modifier.constrainAs(author) {
                     linkTo(
                         profileImage.end,
                         parent.end,
@@ -78,12 +80,13 @@ fun Card(cardData: CardData){
             )
             Text(
                 text = cardData.description,
-                modifier = Modifier.constrainAs(description){
+                modifier = Modifier.constrainAs(description) {
                     linkTo(
                         profileImage.end,
                         parent.end,
                         startMargin = 8.dp,
-                        endMargin = 8.dp)
+                        endMargin = 8.dp
+                    )
                     width = Dimension.fillToConstraints //이거 안하면 profileImage에 살짝 튀어나옴,,,
                 }
             )
@@ -97,7 +100,7 @@ fun Card(cardData: CardData){
              * 위에서 author의 top margin, description의 bottom margin 넣으면 안되나?
              * 할 수 있지만 chain을 밑에 만드는 순간 위에 margin은 깨져 버린다,,,
              */
-            constrain(chain){
+            constrain(chain) {
                 top.linkTo(parent.top, margin = 8.dp)
                 bottom.linkTo(parent.bottom, margin = 8.dp)
             }

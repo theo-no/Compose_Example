@@ -74,6 +74,14 @@ fun HomeScreen(
                 "CustomDialog"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.DropDownMenu.route)
+        }) {
+            Text(
+                "DropDownMenu"
+            )
+        }
     }
 
 }

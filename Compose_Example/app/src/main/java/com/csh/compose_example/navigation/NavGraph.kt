@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.csh.compose_example.uses.screen.AnimationScreen
 import com.csh.compose_example.uses.screen.BottomAppBarScreen
 import com.csh.compose_example.uses.screen.CanvasScreen
 import com.csh.compose_example.uses.screen.ConstraintChainAndBarrierScreen
@@ -80,6 +81,11 @@ fun NavGraph(
             route = Screen.State.route
         ) {
             StateScreen(navController)
+        }
+        composable(
+            route = Screen.Animation.route
+        ) {
+            AnimationScreen(navController)
         }
     }
 } // End of setUpNavGraph

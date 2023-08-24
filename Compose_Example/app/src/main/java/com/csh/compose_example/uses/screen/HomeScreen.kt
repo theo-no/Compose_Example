@@ -106,6 +106,14 @@ fun HomeScreen(
                 "State"
             )
         }
+        Spacer(modifier = Modifier.run { size(8.dp) })
+        Button(onClick = {
+            navController.navigate(Screen.Animation.route)
+        }) {
+            Text(
+                "Animation"
+            )
+        }
     }
 
 }

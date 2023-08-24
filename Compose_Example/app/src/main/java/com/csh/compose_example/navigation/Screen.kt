@@ -16,4 +16,5 @@ sealed class Screen(val route: String) {
     object SnackBar : Screen(route = "snack_bar_screen")
     object BottomAppBar : Screen(route = "bottom_app_bar_screen")
     object State : Screen(route = "state_screen")
+    object Animation : Screen(route = "animation_screen")
 }

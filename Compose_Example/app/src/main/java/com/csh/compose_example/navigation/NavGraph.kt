@@ -21,6 +21,7 @@ import com.csh.compose_example.uses.screen.HomeScreen
 import com.csh.compose_example.uses.screen.SideEffectScreen
 import com.csh.compose_example.uses.screen.SnackBarScreen
 import com.csh.compose_example.uses.screen.StateScreen
+import com.csh.compose_example.uses.screen.ToDoScreen
 
 @Composable
 fun NavGraph(
@@ -99,6 +100,11 @@ fun NavGraph(
             route = Screen.SideEffect.route
         ) {
             SideEffectScreen(LocalLifecycleOwner.current, navController)
+        }
+        composable(
+            route = Screen.ToDo.route
+        ) {
+            ToDoScreen(navController)
         }
     }
 } // End of setUpNavGraph
